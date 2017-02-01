@@ -29,7 +29,8 @@ void taxTaker(taxPayer* tp)
 			// must be a number and greater than 0
 			if (std::cin >> incomeInput && !std::isnan(incomeInput) && incomeInput > 0) 
 			{
-	        	break;
+	        		break;
+			}
 	    	} 
 	    	else // otherwise it will print this
 	    	{
@@ -52,7 +53,8 @@ void taxTaker(taxPayer* tp)
 			// must be a number and greater than 0
 			if (std::cin >> rateInput && !std::isnan(rateInput) && rateInput >= 0.01 && rateInput <= 9.9) 
 			{
-	        	break;
+	        		break;
+			}
 	    	} 
 	    	else // otherwise it will print this
 	    	{
