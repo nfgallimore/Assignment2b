@@ -29,20 +29,20 @@ void taxTaker(taxPayer* tp)
 			// must be a number and greater than 0
 			if (std::cin >> incomeInput && !std::isnan(incomeInput) && incomeInput > 0) 
 			{
-	        	break;
-	    	} 
-	    	else // otherwise it will print this
-	    	{
-		        std::cout << "Please enter a number greater than 0." << std::endl;
-		        
-		        // flushes input stream
-		        std::cin.clear();
-		        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-	    	}
-	    }
+				break;
+			}
+			else // otherwise it will print this
+			{
+				std::cout << "Please enter a number greater than 0." << std::endl;
 
-	    // tmp variable to store rate input for validation before it is written to struct
-	    float rateInput;
+				// flushes input stream
+				std::cin.clear();
+				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			}
+		}
+
+	        // tmp variable to store rate input for validation before it is written to struct
+		float rateInput;
 
 		// asks user for tax rate
 		std::cout << "Enter the tax rate for tax payer # " << i + 1 << ": ";
@@ -52,17 +52,17 @@ void taxTaker(taxPayer* tp)
 			// must be a number and greater than 0
 			if (std::cin >> rateInput && !std::isnan(rateInput) && rateInput >= 0.01 && rateInput <= 9.9) 
 			{
-	        	break;
-	    	} 
-	    	else // otherwise it will print this
-	    	{
-		        std::cout << "Please enter a number greater than 0." << std::endl;
-		        
-		        // flushes input stream
-		        std::cin.clear();
-		        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+				break;
+			}
+			else // otherwise it will print this
+			{
+				std::cout << "Please enter a number greater than 0." << std::endl;
+
+				// flushes input stream
+				std::cin.clear();
+				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			}
 	    	}
-	    }
 		
 		// computes tax where rate is treated as a percentage
 		tp[i].taxes = tp[i].rate / 100 * tp[i].income;
