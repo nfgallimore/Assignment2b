@@ -24,7 +24,7 @@ void taxTaker(taxPayer* tp)
 		// asks user for income
 		std::cout << "\nEnter this year's income for tax payer " << i + 1 << ": ";
 
-		while (true)
+		while (1)
 		{
 			// must be a number and greater than 0
 			if (std::cin >> incomeInput && !std::isnan(incomeInput) && incomeInput > 0) 
